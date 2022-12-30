@@ -42,6 +42,7 @@ dependencies:
   theme_button: ^1.0.4
   day_night_switcher: ^0.2.0+1
   lazy_load_scrollview: ^1.3.0
+  flutter_launcher_icons: ^0.11.0
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,13 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/Images/JPG/appIcon.jpg"
+  min_sdk_android: 21
+
 flutter:
 
   # The following line ensures that the Material Icons font is
@@ -68,6 +76,7 @@ flutter:
     - assets/Images/GIF/no-internet-connection.gif
     - assets/Images/JPG/imgPlaceholder.jpeg
     - assets/Images/JPG/noDataFound.jpg
+    - assets/Images/JPG/appIcon.jpg
 
 
   # To add assets to your application, add an assets section, like this:
