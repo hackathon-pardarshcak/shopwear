@@ -4,7 +4,7 @@ import 'Network/NetworkHandler/network_binding.dart';
 import 'UI/View/AllProductsModule/View/allproducts_screen.dart';
 import 'UI/View/DetailScreenModule/View/measurement_screen.dart';
 
-import 'UI/View/MeasurmentModule/measurement_screen.dart';
+import 'UI/View/MeasurmentModule/landing_screen.dart';
 
 void main() {
   runApp( const MyApp());
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       initialBinding: NetworkBinding(),
       theme: ThemeData.light(),
       // fallbackLocale: const Locale('en', 'US'),
-      home: const MeasurementView(),
+      home: const LandingScreen(),
     );
   }
 }

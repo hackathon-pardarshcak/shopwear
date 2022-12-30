@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxdemo/UI/CustomWidgets/common_button.dart';
 import 'package:getxdemo/UI/CustomWidgets/custom_appbar.dart';
 import 'package:getxdemo/Utils/common_function.dart';
 import 'package:getxdemo/Utils/string_constants.dart';
@@ -22,13 +23,14 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          appBar: commonAppBar(enterMeasurement, false, context),
+          appBar: commonAppBarTxt(context,enterMeasurement, false),
           body: Obx(()=>
             SingleChildScrollView(
               child: Column(
                 children: [
                   heightWidget(),
                   weightWidget(),
+                  commonButton(context, 'NEXT', () { print('object');})
                 ],
               ),
             ),

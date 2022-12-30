@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getxdemo/UI/View/DetailScreenModule/View/measurement_view.dart';
 import 'package:getxdemo/UI/View/GridViewScreen/View/allProductsGridview.dart';
 import 'package:getxdemo/Utils/app_colors.dart';
 import 'package:getxdemo/Utils/common_style.dart';
@@ -6,14 +7,14 @@ import 'package:getxdemo/Utils/common_style.dart';
 import '../../../Utils/string_constants.dart';
 import '../../CustomWidgets/common_button.dart';
 
-class MeasurementScreen extends StatefulWidget {
-  const MeasurementScreen({Key? key}) : super(key: key);
+class LandingScreen extends StatefulWidget {
+  const LandingScreen({Key? key}) : super(key: key);
 
   @override
-  State<MeasurementScreen> createState() => _MeasurementScreenState();
+  State<LandingScreen> createState() => _LandingScreenState();
 }
 
-class _MeasurementScreenState extends State<MeasurementScreen> {
+class _LandingScreenState extends State<LandingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +60,7 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
                     child:commonButton(context,tapTOMeasureTxt,() {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => AllProductsGridview()),
+                        MaterialPageRoute(builder: (context) => MeasurementScreen()),
                       );
                     }),
                   ),

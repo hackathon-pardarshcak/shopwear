@@ -24,7 +24,7 @@ class _BottomWereGridviewState extends State<BottomWereGridview> {
     final double itemWidth = size.width / 2;
     return SafeArea(
       child: Scaffold(
-        appBar: commonAppBar(context,true),
+        appBar: commonAppBarImg(context,true),
         drawer: customDrawer(context),
         body: Obx(()=>
         bottomWereGrid.isLoading == true ? commonCircularProgress() : bottomProductsGridView(context,itemWidth,itemHeight,bottomWereGrid)),

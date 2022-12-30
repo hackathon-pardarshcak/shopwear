@@ -51,7 +51,7 @@ class _AllProductsViewState extends State<AllProductsView> with WidgetsBindingOb
 
   Widget userListing(AllProductsViewModel userViewModel) {
     return Scaffold(
-        appBar: commonAppBar(context,true),
+        appBar: commonAppBarImg(context,true),
         body: Obx(() => userViewModel.onError.isTrue
             ? const NoDataFound()
             : userViewModel.isLoading.value == true
