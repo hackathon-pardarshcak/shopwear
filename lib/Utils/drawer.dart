@@ -7,9 +7,11 @@ Widget customDrawer(BuildContext context) {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.green,
-              ), //BoxDecoration
-              child: Text('data')
+                image: DecorationImage(
+                  fit: BoxFit.scaleDown,
+                  image: AssetImage("assets/Images/PNG/drawerImage.png"),
+                ),
+              ), child: SizedBox.shrink(),
             ),
             ListTile(
               title: const Text('Top'),
