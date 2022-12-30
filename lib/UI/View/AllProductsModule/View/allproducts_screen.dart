@@ -23,7 +23,6 @@ class _AllProductsListingState extends State<AllProductsListing> with WidgetsBin
 
   @override
   void dispose() {
-
     super.dispose();
   }
 

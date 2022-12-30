@@ -11,6 +11,7 @@ PreferredSizeWidget commonAppBar(appTitle,searchVisibility, BuildContext context
       ),
     ),
     centerTitle: true,
+    iconTheme: IconThemeData(color: AppColors.bgBlack),
     // leading: IconButton(onPressed: (){}, icon: Icon(Icons.menu),color: AppColors.bgBlack),
     actions: [
       Visibility(visible: searchVisibility,child: IconButton(onPressed: (){}, icon: Icon(Icons.search),color: AppColors.bgBlack)),

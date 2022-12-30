@@ -77,6 +77,8 @@ flutter:
     - assets/Images/JPG/imgPlaceholder.jpeg
     - assets/Images/JPG/noDataFound.jpg
     - assets/Images/JPG/appIcon.jpg
+    - assets/Images/PNG/drawerIcon.png
+    - assets/Images/PNG/drawerImage.png
 
 
   # To add assets to your application, add an assets section, like this:
