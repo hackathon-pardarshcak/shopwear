@@ -4,6 +4,7 @@ import 'package:getxdemo/Utils/app_colors.dart';
 import 'package:getxdemo/Utils/common_style.dart';
 
 import '../../../Utils/string_constants.dart';
+import '../../CustomWidgets/common_button.dart';
 
 class MeasurementScreen extends StatefulWidget {
   const MeasurementScreen({Key? key}) : super(key: key);
@@ -55,25 +56,12 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
                     padding: const EdgeInsets.only(
                       top: 70.0,
                     ),
-                    child: SizedBox(
-                      height: 67,
-                      width: MediaQuery.of(context).size.width,
-                      child: ElevatedButton(
-                        child: Text(tapTOMeasure,
-                            style: TextStyle(
-                                color: AppColors.bgWhite,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400),
-                            textAlign: TextAlign.center),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Gridview()),
-                          );
-                        },
-                        style: measurementBtnStyle,
-                      ),
-                    ),
+                    child:commonButton(context,tapTOMeasureTxt,() {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Gridview()),
+                      );
+                    }),
                   ),
                 ],
               ),
