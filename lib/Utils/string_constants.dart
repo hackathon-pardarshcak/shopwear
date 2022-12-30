@@ -6,9 +6,10 @@ const String customUserName = 'Username:';
 const String userEmail = 'Email:';
 const String title = 'Basic Structure';
 const String advanceTitle = 'Advance Structure';
-const String tapTOMeasureTxt = 'TAP TO MEASURE';
+const String tapTOMeasureTxt = 'Tap To Measure';
 const String measurementTxt = "Let's change ecommerce experience";
 const String helloTxt = 'Hello\n\nIPSIANS';
+const String takeTrialBtnTxt = 'Take Trial';
 
 ///Image Path
 const String noInternetImage = 'assets/Images/GIF/no-internet-connection.gif';
@@ -19,8 +20,8 @@ const String weightImage = 'assets/Images/PNG/weight.png';
 
 ///Measurement Screen
 const String enterMeasurement = 'Enter Measurement';
-const String selectHeight = 'SELECT HEIGHT';
-const String selectWeight = 'SELECT WEIGHT';
+const String selectHeight = 'Select Height';
+const String selectWeight = 'Select Weight';
 
 const drawerImg = 'assets/Images/PNG/drawerImage.png';
 const drawerIconImg = 'assets/Images/PNG/drawerIcon.png';

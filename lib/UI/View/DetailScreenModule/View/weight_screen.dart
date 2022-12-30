@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shopwear/UI/View/DetailScreenModule/View/weight_view.dart';
+
 import '../../../../Config/Services/network_manager.dart';
 import '../../../../Utils/error_screen.dart';
-import 'measurement_view.dart';
 
-class MeasurementView extends StatefulWidget {
-  const MeasurementView({Key? key}) : super(key: key);
+class Weightmeasurement extends StatefulWidget {
+  const Weightmeasurement({Key? key}) : super(key: key);
 
   @override
-  State<MeasurementView> createState() => _MeasurementViewState();
+  State<Weightmeasurement> createState() => _WeightmeasurmentState();
 }
 
-class _MeasurementViewState extends State<MeasurementView>
-    with WidgetsBindingObserver {
+class _WeightmeasurmentState extends State<Weightmeasurement>  with WidgetsBindingObserver{
   final GetXNetworkManager networkManager = Get.find<GetXNetworkManager>();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: GetBuilder<GetXNetworkManager>(
-            // ignore: unrelated_type_equality_checks
+          // ignore: unrelated_type_equality_checks
             builder: (builder) => networkManager.connectionType == 0
                 ? const SomethingWentWrong()
-                :  MeasurementScreen()
+                :  WeightMeasurementView()
         )
 
 

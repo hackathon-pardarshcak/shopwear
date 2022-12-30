@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shopwear/UI/CustomWidgets/common_button.dart';
 import 'package:shopwear/UI/CustomWidgets/custom_appbar.dart';
+import 'package:shopwear/UI/View/DetailScreenModule/View/weight_screen.dart';
 import 'package:shopwear/Utils/string_constants.dart';
 import 'package:weight_slider/weight_slider.dart';
 
@@ -15,7 +16,6 @@ class MeasurementScreen extends StatefulWidget {
 
 
 class _MeasurementScreenState extends State<MeasurementScreen> {
-  RxInt weight = 70.obs;
   RxInt height = 150.obs;
 
   @override
@@ -28,8 +28,12 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
               child: Column(
                 children: [
                   heightWidget(),
-                  weightWidget(),
-                  commonButton(context, 'NEXT', () { print('object');})
+                  Padding(
+                    padding: const EdgeInsets.only(top: 200,left: 50,right: 50),
+                    child: commonButton(context, 'NEXT', () {
+                      Weightmeasurement();}
+                    ),
+                  )
                 ],
               ),
             ),
@@ -42,40 +46,23 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
   Widget heightWidget() {
     return Column(
       children: [
-        Padding(padding: EdgeInsets.only(top: 29,),child: Center(child: Image.asset(heightImage)),),
-        Padding(padding: EdgeInsets.only(top: 25,left: 53),child: Align(alignment:Alignment.centerLeft,child: Text(selectHeight)),),
+        Padding(padding: EdgeInsets.only(top: 50,),child: Center(child: Image.asset(heightImage)),),
+        Padding(padding: EdgeInsets.only(top: 100,left: 53),child: Align(alignment:Alignment.centerLeft,child: Text(selectHeight.toUpperCase())),),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: WeightSlider(
             weight: height.value,
             minWeight: 121,
             maxWeight: 213,
-            onChange: (val) {height.value = val;print('Height${height}');},
-            unit: 'cm', // optional
+            onChange: (val) {
+              height.value = val;
+              print('Height${height}');},
+              unit: 'cm', // optional
           ),
         ),
 
       ],
     );
   }
-  Widget weightWidget() {
-    return Column(
-      children: [
-        Padding(padding: EdgeInsets.only(top: 29,),child: Center(child: Image.asset(weightImage)),),
-        Padding(padding: EdgeInsets.only(top: 25,left: 53),child: Align(alignment:Alignment.centerLeft,child: Text(selectWeight)),),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: WeightSlider(
-            weight: weight.value,
-            minWeight: 30,
-            maxWeight: 100,
-            onChange: (val) {weight.value = val;print('Weight${weight}');},
-            unit: 'kg', // optional
-          ),
-        ),
-      ],
-    );
-  }
-
 
 }
