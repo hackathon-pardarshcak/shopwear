@@ -24,7 +24,7 @@ class _AllProductsGridviewState extends State<AllProductsGridview> {
     final double itemWidth = size.width / 2;
     return SafeArea(
       child: Scaffold(
-          appBar: commonAppBar('grid', true , context),
+          appBar: commonAppBar(context, true),
           drawer: customDrawer(context),
           body: Obx(()=>
           allProductsViewModel.isLoading == true ? commonCircularProgress() : allProductsGridView(context,itemWidth,itemHeight, allProductsViewModel)),

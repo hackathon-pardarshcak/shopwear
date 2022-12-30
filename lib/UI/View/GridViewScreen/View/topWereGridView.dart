@@ -24,7 +24,7 @@ class _TopWereGridviewState extends State<TopWereGridview> {
     final double itemWidth = size.width / 2;
     return SafeArea(
       child: Scaffold(
-        appBar: commonAppBar('topGrid', true , context),
+        appBar: commonAppBar(context, true),
         drawer: customDrawer(context),
         body: Obx(()=>
         topWereGrid.isLoading == true ? commonCircularProgress() : topProductsGridView(context,itemWidth,itemHeight,topWereGrid)),
