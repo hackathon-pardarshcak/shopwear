@@ -1,6 +1,7 @@
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxdemo/UI/CustomWidgets/custom_appbar.dart';
 
 import '../../../../Utils/common_function.dart';
 import '../../../../Utils/no_data_found.dart';
@@ -53,18 +54,7 @@ class _AllProductsViewState extends State<AllProductsView>
 
   Widget userListing(AllProductsViewModel userViewModel) {
     return Scaffold(
-        appBar: AppBar(
-          title: customText(title),
-          centerTitle: true,
-          leading: IconButton(
-              onPressed: () {}, icon: Icon(Icons.airplanemode_active)),
-          actions: [
-            DayNightSwitcher(
-              isDarkModeEnabled: isDarkModeEnable,
-              onStateChanged: onStateChanged,
-            ),
-          ],
-        ),
+        appBar: commonAppBar('Hello', true,context),
         body: Obx(() => userViewModel.onError.isTrue
             ? const NoDataFound()
             : userViewModel.isLoading.value == true
