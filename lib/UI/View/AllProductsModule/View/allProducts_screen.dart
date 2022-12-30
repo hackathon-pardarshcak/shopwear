@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/Utils/error_screen.dart';
+import 'package:shopwear/Utils/error_screen.dart';
 import '../../../../Config/Services/network_manager.dart';
 import '../../GridViewScreen/View/allProductsGridview.dart';
 

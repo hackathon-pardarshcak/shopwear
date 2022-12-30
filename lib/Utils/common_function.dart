@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/UI/CustomWidgets/custom_circularprogressindicator.dart';
-import 'package:getxdemo/Utils/string_constants.dart';
+import 'package:shopwear/UI/CustomWidgets/custom_circularprogressindicator.dart';
+import 'package:shopwear/Utils/string_constants.dart';
 import 'package:path/path.dart' as p;
 import 'dart:developer' as dev;
 

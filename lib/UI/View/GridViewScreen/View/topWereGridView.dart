@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/UI/View/TopWearModule/View_Model/topwearproducts_view_model.dart';
+import 'package:shopwear/UI/View/TopWearModule/View_Model/topwearproducts_view_model.dart';
 import '../../../../Utils/drawer.dart';
 import '../../../CustomWidgets/custom_appbar.dart';
 import '../../../CustomWidgets/custom_circularprogressindicator.dart';

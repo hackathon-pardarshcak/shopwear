@@ -1,7 +1,7 @@
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/UI/CustomWidgets/custom_appbar.dart';
+import 'package:shopwear/UI/CustomWidgets/custom_appbar.dart';
 
 import '../../../../Utils/common_function.dart';
 import '../../../../Utils/no_data_found.dart';

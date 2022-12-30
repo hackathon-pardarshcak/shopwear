@@ -1,4 +1,4 @@
-# getxdemo
+# shopwear
 
 A new Flutter project.
 

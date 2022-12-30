@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getxdemo/Utils/string_constants.dart';
+import 'package:shopwear/Utils/string_constants.dart';
 
 import '../../Utils/app_colors.dart';
 

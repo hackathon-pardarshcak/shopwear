@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getxdemo/Utils/app_colors.dart';
+
+import 'app_colors.dart';
 
 var measurementBtnStyle = ElevatedButton.styleFrom(
   backgroundColor: AppColors.bgBlack,

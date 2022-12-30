@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/UI/CustomWidgets/common_button.dart';
-import 'package:getxdemo/UI/CustomWidgets/custom_appbar.dart';
-import 'package:getxdemo/Utils/common_function.dart';
-import 'package:getxdemo/Utils/string_constants.dart';
+import 'package:shopwear/UI/CustomWidgets/common_button.dart';
+import 'package:shopwear/UI/CustomWidgets/custom_appbar.dart';
+import 'package:shopwear/Utils/string_constants.dart';
 import 'package:weight_slider/weight_slider.dart';
 
 

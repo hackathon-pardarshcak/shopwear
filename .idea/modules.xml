@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/shopwear.iml" filepath="$PROJECT_DIR$/.idea/shopwear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopwear.iml" filepath="$PROJECT_DIR$/shopwear.iml" />
       <module fileurl="file://$PROJECT_DIR$/android/shopwear_android.iml" filepath="$PROJECT_DIR$/android/shopwear_android.iml" />
     </modules>
   </component>

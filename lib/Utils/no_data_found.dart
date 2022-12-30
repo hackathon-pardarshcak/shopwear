@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getxdemo/Utils/string_constants.dart';
 import '../UI/CustomWidgets/custom_container.dart';
+import 'string_constants.dart';
 
 // ignore: must_be_immutable
 class NoDataFound extends StatefulWidget {

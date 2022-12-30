@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:getxdemo/UI/View/DetailScreenModule/View/measurement_view.dart';
-import 'package:getxdemo/UI/View/GridViewScreen/View/allProductsGridview.dart';
-import 'package:getxdemo/Utils/app_colors.dart';
-import 'package:getxdemo/Utils/common_style.dart';
-
+import '../../../Utils/app_colors.dart';
 import '../../../Utils/string_constants.dart';
 import '../../CustomWidgets/common_button.dart';
+import '../DetailScreenModule/View/measurement_view.dart';
 
 class LandingScreen extends StatefulWidget {
   const LandingScreen({Key? key}) : super(key: key);

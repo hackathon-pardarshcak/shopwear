@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:getxdemo/UI/View/AllProductsModule/View_Model/allProducts_view_model.dart';
-import 'package:getxdemo/UI/View/BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
-import 'package:getxdemo/UI/View/TopWearModule/View_Model/topwearproducts_view_model.dart';
-import 'package:getxdemo/Utils/common_function.dart';
+import 'package:shopwear/UI/View/AllProductsModule/View_Model/allProducts_view_model.dart';
+import 'package:shopwear/UI/View/BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
+import 'package:shopwear/UI/View/TopWearModule/View_Model/topwearproducts_view_model.dart';
+import 'package:shopwear/Utils/common_function.dart';
 
 Widget topProductsGridView(BuildContext context, double itemWidth, double itemHeight, TopWearProductsViewModel topProductsViewModel) {
   //int selectedCard = -1.obs;
@@ -22,7 +22,9 @@ Widget topProductsGridView(BuildContext context, double itemWidth, double itemHe
       ),
       itemBuilder: (context, index) {
         return GestureDetector(
-          onTap: () {},
+          onTap: () {
+            print("object---->");
+          },
           child: Container(
             alignment: Alignment.center,
             decoration: BoxDecoration(

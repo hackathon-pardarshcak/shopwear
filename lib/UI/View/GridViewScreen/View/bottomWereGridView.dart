@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/UI/View/BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
 import '../../../../Utils/drawer.dart';
 import '../../../CustomWidgets/custom_appbar.dart';
 import '../../../CustomWidgets/custom_circularprogressindicator.dart';
 import '../../../CustomWidgets/custom_gridview.dart';
+import '../../BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
 
 class BottomWereGridview extends StatefulWidget {
   const BottomWereGridview({Key? key}) : super(key: key);
