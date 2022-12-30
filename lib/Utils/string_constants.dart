@@ -11,4 +11,5 @@ const String advanceTitle = 'Advance Structure';
 const String noInternetImage = 'assets/Images/GIF/no-internet-connection.gif';
 const String placeHolder = 'assets/Images/JPG/imgPlaceholder.jpeg';
 const String noDataFound = 'assets/Images/JPG/noDataFound.jpg';
-const measurementScreenImg = 'assets/Images/PNG/drawerImage.png';
+const drawerImg = 'assets/Images/PNG/drawerImage.png';
+const drawerIconImg = 'assets/Images/PNG/drawerIcon.png';

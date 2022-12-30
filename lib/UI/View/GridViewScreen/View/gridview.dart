@@ -17,7 +17,7 @@ class _GridviewState extends State<Gridview> {
     final double itemWidth = size.width / 2;
     return SafeArea(
       child: Scaffold(
-          appBar: commonAppBar('grid', true , context),
+          appBar: commonAppBar(context,true),
           drawer: customDrawer(context),
           body: GridView.builder(
             physics: BouncingScrollPhysics(),
