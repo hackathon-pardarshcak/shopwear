@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Network/NetworkHandler/network_binding.dart';
 import 'UI/View/GridViewScreen/View/gridview.dart';
-import 'UI/View/UserModule/View/user_screen.dart';
 
 void main() {
   runApp( const MyApp());

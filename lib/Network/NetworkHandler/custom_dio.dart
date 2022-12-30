@@ -13,6 +13,8 @@ class CustomDio {
   Future<Dio> getDio () async {
     dio.interceptors.clear();
     dio.interceptors.add(getInterceptorsWrapper());
+    dio.options.headers['Consumerkey'] = 'ck_0cbe7da980cea94bba74b7639fe7352324975107';
+    dio.options.headers['Consumersecret'] = 'cs_fd5be2b96589e672b3419b4eeccae804e43c0315';
     return dio;
   }
 
