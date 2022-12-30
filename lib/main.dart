@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Network/NetworkHandler/network_binding.dart';
-import 'UI/View/GridViewScreen/View/gridview.dart';
+import 'UI/View/MeasurmentModule/measurement_screen.dart';
 
 void main() {
   runApp( const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialBinding: NetworkBinding(),
       theme: ThemeData.light(),
-      home: const Gridview(),
+      home: const MeasurementScreen(),
     );
   }
 }
