@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../UI/View/GridViewScreen/View/bottomWereGridView.dart';
+import '../UI/View/GridViewScreen/View/allProductsGridview.dart';
+import '../UI/View/TopWearModule/View/topProducts_screen.dart';
+
+
 Widget customDrawer(BuildContext context) {
     return Drawer(
         child: ListView(
@@ -16,19 +21,19 @@ Widget customDrawer(BuildContext context) {
             ListTile(
               title: const Text('Top'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => TopProductsListing()));
               },
             ),
             ListTile(
               title: const Text('Bottom'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  BottomWereGridview()));
               },
             ),
             ListTile(
               title: const Text('All products'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  AllProductsGridview()));
               },
             ),
           ],
