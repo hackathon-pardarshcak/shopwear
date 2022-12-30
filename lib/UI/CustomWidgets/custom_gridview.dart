@@ -5,6 +5,7 @@ import 'package:getxdemo/UI/View/TopWearModule/View_Model/topwearproducts_view_m
 import 'package:getxdemo/Utils/common_function.dart';
 
 Widget topProductsGridView(BuildContext context, double itemWidth, double itemHeight, TopWearProductsViewModel topProductsViewModel) {
+  //int selectedCard = -1.obs;
   print('Length${topProductsViewModel.topProductList.length}');
   return SafeArea(
     child: GridView.builder(
