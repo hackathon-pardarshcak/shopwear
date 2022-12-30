@@ -23,7 +23,7 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
             Padding(
               padding:
                   const EdgeInsets.only(top: 52.0, left: 109.0, right: 109.0),
-              child: Text('Hello\n\nIPSIANS',
+              child: Text(helloTxt,
                   style: TextStyle(
                       color: AppColors.bgBlack,
                       fontSize: 24,
@@ -36,7 +36,7 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 85.0),
-                    child: Text("Let's change ecommerce experience",
+                    child: Text(measurementTxt,
                         style: TextStyle(
                             color: AppColors.bgBlack,
                             fontSize: 24,
@@ -59,7 +59,7 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
                       height: 67,
                       width: MediaQuery.of(context).size.width,
                       child: ElevatedButton(
-                        child: Text('TAP TO MEASURE',
+                        child: Text(tapTOMeasure,
                             style: TextStyle(
                                 color: AppColors.bgWhite,
                                 fontSize: 20,

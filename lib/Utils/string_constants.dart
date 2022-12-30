@@ -6,6 +6,9 @@ const String customUserName = 'Username:';
 const String userEmail = 'Email:';
 const String title = 'Basic Structure';
 const String advanceTitle = 'Advance Structure';
+const String tapTOMeasure = 'TAP TO MEASURE';
+const String measurementTxt = "Let's change ecommerce experience";
+const String helloTxt = 'Hello\n\nIPSIANS';
 
 ///Image Path
 const String noInternetImage = 'assets/Images/GIF/no-internet-connection.gif';
