@@ -37,12 +37,12 @@ dependencies:
   get: ^4.6.5
   dio: ^4.0.6
   logger: ^1.1.0
-  flutter_svg: ^1.1.5
   connectivity_plus: ^2.3.7
   theme_button: ^1.0.4
   day_night_switcher: ^0.2.0+1
   lazy_load_scrollview: ^1.3.0
   flutter_launcher_icons: ^0.11.0
+  weight_slider: ^1.3.0-nullsafety+1
 
 dev_dependencies:
   flutter_test:
@@ -77,6 +77,8 @@ flutter:
     - assets/Images/JPG/imgPlaceholder.jpeg
     - assets/Images/JPG/noDataFound.jpg
     - assets/Images/JPG/appIcon.jpg
+    - assets/Images/PNG/height.png
+    - assets/Images/PNG/weight.png
 
 
   # To add assets to your application, add an assets section, like this:

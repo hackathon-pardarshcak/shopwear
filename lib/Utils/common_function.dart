@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:getxdemo/Utils/string_constants.dart';
 import 'package:path/path.dart' as p;
@@ -37,22 +36,9 @@ Widget imageLoad(String? imgPath) {
   if (imgPath?.isNotEmpty==true) {
     extImg = p.extension(imgPath!);
     if (imgPath.isURL) {
-      if (extImg.toLowerCase() == '.svg') {
-        return SvgPicture.network(
-          imgPath,
-          placeholderBuilder: (context) {
-            return Image.asset(placeHolder);
-          },
-        );
-      } else {
         return imageLoader(imgPath);
-      }
     } else {
-      if (extImg.toLowerCase() == '.svg') {
-        return SvgPicture.asset(imgPath);
-      } else {
         return Image.asset(imgPath);
-      }
     }
   } else {
     return Image.asset(placeHolder);
