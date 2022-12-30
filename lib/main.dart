@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Network/NetworkHandler/network_binding.dart';
-import 'UI/View/UserModule/View/user_screen.dart';
+import 'UI/View/AllProductsModule/View/allproducts_screen.dart';
+
 
 void main() {
   runApp( const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialBinding: NetworkBinding(),
       theme: ThemeData.light(),
       // fallbackLocale: const Locale('en', 'US'),
-      home: const UserListing(),
+      home: const AllProductsListing(),
     );
   }
 }

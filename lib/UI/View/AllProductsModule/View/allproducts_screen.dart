@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/UI/View/UserModule/View/user_view.dart';
 import 'package:getxdemo/Utils/error_screen.dart';
 import '../../../../Config/Services/network_manager.dart';
+import 'allproducts_view.dart';
 
 
-class UserListing extends StatefulWidget {
-  const UserListing({Key? key}) : super(key: key);
+class AllProductsListing extends StatefulWidget {
+  const AllProductsListing({Key? key}) : super(key: key);
 
   @override
-  State<UserListing> createState() => _UserListingState();
+  State<AllProductsListing> createState() => _AllProductsListingState();
 }
 
-class _UserListingState extends State<UserListing> with WidgetsBindingObserver{
+class _AllProductsListingState extends State<AllProductsListing> with WidgetsBindingObserver{
 
   final GetXNetworkManager networkManager = Get.find<GetXNetworkManager>();
 
@@ -34,7 +34,7 @@ class _UserListingState extends State<UserListing> with WidgetsBindingObserver{
         // ignore: unrelated_type_equality_checks
         builder: (builder) => networkManager.connectionType == 0
             ? const SomethingWentWrong()
-            : const UserView()
+            : const AllProductsView()
       ),
     );
   }

@@ -1,28 +1,32 @@
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/UI/View/FlightModule/View/flight_screen.dart';
 
+import '../../../../Utils/common_function.dart';
 import '../../../../Utils/no_data_found.dart';
 import '../../../../Utils/string_constants.dart';
 import '../../../CustomWidgets/custom_loading.dart';
 import '../../../CustomWidgets/custom_text.dart';
-import '../View_Model/user_view_model.dart';
+import '../../BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
+import '../../TopWearModule/View_Model/topwearproducts_view_model.dart';
+import '../View_Model/allproducts_view_model.dart';
 
-class UserView extends StatefulWidget {
-  const UserView({Key? key}) : super(key: key);
+class AllProductsView extends StatefulWidget {
+  const AllProductsView({Key? key}) : super(key: key);
 
   @override
-  State<UserView> createState() => _UserViewState();
+  State<AllProductsView> createState() => _AllProductsViewState();
 }
 
-class _UserViewState extends State<UserView> with WidgetsBindingObserver {
-  final userViewModel = Get.find<UserViewModel>();
+class _AllProductsViewState extends State<AllProductsView>
+    with WidgetsBindingObserver {
+  final allProductsViewModel = Get.find<AllProductsViewModel>();
+
   bool isDarkModeEnable = false;
 
   void onStateChanged(bool isDarkModeEnable) {
     setState(() {
-      if(isDarkModeEnable == true) {
+      if (isDarkModeEnable == true) {
         this.isDarkModeEnable = isDarkModeEnable;
         Get.changeTheme(ThemeData.dark());
       } else {
@@ -44,19 +48,16 @@ class _UserViewState extends State<UserView> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: userListing(userViewModel));
+    return SafeArea(child: userListing(allProductsViewModel));
   }
 
-  Widget userListing(UserViewModel userViewModel) {
+  Widget userListing(AllProductsViewModel userViewModel) {
     return Scaffold(
         appBar: AppBar(
           title: customText(title),
           centerTitle: true,
           leading: IconButton(
-              onPressed: () {
-                Get.to(FlightScreen());
-              },
-              icon: Icon(Icons.airplanemode_active)),
+              onPressed: () {}, icon: Icon(Icons.airplanemode_active)),
           actions: [
             DayNightSwitcher(
               isDarkModeEnabled: isDarkModeEnable,
@@ -70,7 +71,7 @@ class _UserViewState extends State<UserView> with WidgetsBindingObserver {
                 ? customLoading()
                 : ListView.builder(
                     physics: const BouncingScrollPhysics(),
-                    itemCount: userViewModel.userList.length,
+                    itemCount: userViewModel.allProductList.length,
                     itemBuilder: (context, index) {
                       return Card(
                         child: Container(
@@ -78,11 +79,13 @@ class _UserViewState extends State<UserView> with WidgetsBindingObserver {
                           child: Column(
                             children: [
                               customText(
-                                  '$userName ${userViewModel.userList[index].name}'),
+                                  '$userName ${userViewModel.allProductList[index].price}'),
                               customText(
-                                  '$customUserName ${userViewModel.userList[index].username}'),
+                                  '$customUserName ${userViewModel.allProductList[index].description}'),
                               customText(
-                                  '$userEmail ${userViewModel.userList[index].email}'),
+                                  '$userEmail ${userViewModel.allProductList[index].id}'),
+                              imageLoad(
+                                  userViewModel.allProductList[index].image)
                             ],
                           ),
                         ),
