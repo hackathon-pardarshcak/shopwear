@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Network/NetworkHandler/network_binding.dart';
+import 'UI/View/GridViewScreen/View/gridview.dart';
 import 'UI/View/UserModule/View/user_screen.dart';
 
 void main() {
@@ -18,8 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialBinding: NetworkBinding(),
       theme: ThemeData.light(),
-      // fallbackLocale: const Locale('en', 'US'),
-      home: const UserListing(),
+      home: const Gridview(),
     );
   }
 }

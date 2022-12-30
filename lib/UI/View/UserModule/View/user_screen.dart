@@ -23,7 +23,6 @@ class _UserListingState extends State<UserListing> with WidgetsBindingObserver{
 
   @override
   void dispose() {
-
     super.dispose();
   }
 
