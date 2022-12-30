@@ -4,7 +4,7 @@ import '../../../../Data/Remote/Response/topwear_model_response.dart';
 import '../../../../Network/Repository/topwear_repository.dart';
 
 class TopWearProductsViewModel extends FullLifeCycleController {
-  var allProductList = <TopWearModel>[].obs;
+  var topProductList = <TopWearModel>[].obs;
   var isLoading = true.obs;
   var onError = false.obs;
 
@@ -19,7 +19,7 @@ class TopWearProductsViewModel extends FullLifeCycleController {
 
     if (topWearProducts != null) {
       isLoading.value = false;
-      allProductList.value = topWearProducts;
+      topProductList.value = topWearProducts;
     } else {
       isLoading.value = false;
       onError.value = true;

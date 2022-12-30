@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import '../../Config/Services/network_manager.dart';
-import '../../UI/View/AllProductsModule/View_Model/allproducts_view_model.dart';
+import '../../UI/View/AllProductsModule/View_Model/allProducts_view_model.dart';
 import '../../UI/View/BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
 import '../../UI/View/TopWearModule/View_Model/topwearproducts_view_model.dart';
 

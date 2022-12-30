@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxdemo/Utils/error_screen.dart';
 import '../../../../Config/Services/network_manager.dart';
-import 'allproducts_view.dart';
+import '../../GridViewScreen/View/allProductsGridview.dart';
 
 
 class AllProductsListing extends StatefulWidget {
@@ -30,10 +30,9 @@ class _AllProductsListingState extends State<AllProductsListing> with WidgetsBin
   Widget build(BuildContext context) {
     return SafeArea(
       child: GetBuilder<GetXNetworkManager>(
-        // ignore: unrelated_type_equality_checks
         builder: (builder) => networkManager.connectionType == 0
             ? const SomethingWentWrong()
-            : const AllProductsView()
+            : const AllProductsGridview()
       ),
     );
   }
