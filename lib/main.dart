@@ -4,6 +4,7 @@ import 'Network/NetworkHandler/network_binding.dart';
 import 'UI/View/AllProductsModule/View/allproducts_screen.dart';
 import 'UI/View/DetailScreenModule/View/measurement_screen.dart';
 
+import 'UI/View/MeasurmentModule/measurement_screen.dart';
 
 void main() {
   runApp( const MyApp());

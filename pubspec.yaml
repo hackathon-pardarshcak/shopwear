@@ -73,10 +73,15 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/Images/GIF/
     - assets/Images/GIF/no-internet-connection.gif
+    - assets/Images/JPG/
     - assets/Images/JPG/imgPlaceholder.jpeg
     - assets/Images/JPG/noDataFound.jpg
     - assets/Images/JPG/appIcon.jpg
+    - assets/Images/PNG/
+    - assets/Images/PNG/drawerIcon.png
+    - assets/Images/PNG/drawerImage.png
     - assets/Images/PNG/height.png
     - assets/Images/PNG/weight.png
 

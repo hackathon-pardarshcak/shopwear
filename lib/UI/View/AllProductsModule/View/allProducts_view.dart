@@ -8,9 +8,7 @@ import '../../../../Utils/no_data_found.dart';
 import '../../../../Utils/string_constants.dart';
 import '../../../CustomWidgets/custom_loading.dart';
 import '../../../CustomWidgets/custom_text.dart';
-import '../../BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
-import '../../TopWearModule/View_Model/topwearproducts_view_model.dart';
-import '../View_Model/allproducts_view_model.dart';
+import '../View_Model/allProducts_view_model.dart';
 
 class AllProductsView extends StatefulWidget {
   const AllProductsView({Key? key}) : super(key: key);
@@ -19,8 +17,7 @@ class AllProductsView extends StatefulWidget {
   State<AllProductsView> createState() => _AllProductsViewState();
 }
 
-class _AllProductsViewState extends State<AllProductsView>
-    with WidgetsBindingObserver {
+class _AllProductsViewState extends State<AllProductsView> with WidgetsBindingObserver {
   final allProductsViewModel = Get.find<AllProductsViewModel>();
 
   bool isDarkModeEnable = false;
@@ -54,7 +51,7 @@ class _AllProductsViewState extends State<AllProductsView>
 
   Widget userListing(AllProductsViewModel userViewModel) {
     return Scaffold(
-        appBar: commonAppBar('Hello', true,context),
+        appBar: commonAppBar(context,true),
         body: Obx(() => userViewModel.onError.isTrue
             ? const NoDataFound()
             : userViewModel.isLoading.value == true

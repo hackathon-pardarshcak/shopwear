@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxdemo/UI/CustomWidgets/custom_circularprogressindicator.dart';
 import 'package:getxdemo/Utils/string_constants.dart';
 import 'package:path/path.dart' as p;
 import 'dart:developer' as dev;
@@ -51,7 +52,7 @@ Image imageLoader(String imgPath) {
         if (loadingProgress == null) {
           return child;
         } else {
-          return const CircularProgressIndicator();
+          return Center(child: commonCircularProgress(),);
         }
       },
     errorBuilder: (context, error, stackTrace) {
