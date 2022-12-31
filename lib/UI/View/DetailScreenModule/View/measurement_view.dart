@@ -46,7 +46,7 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
   Widget heightWidget() {
     return Column(
       children: [
-        Padding(padding: EdgeInsets.only(top: 150,),child: Center(child: Image.asset(heightImage,height: 150,width: 150)),),
+        Padding(padding: EdgeInsets.only(top: 120,),child: Center(child: Image.asset(heightImage,height: 150,width: 150)),),
         Padding(padding: EdgeInsets.only(top: 100,left: 53),child: Align(alignment:Alignment.centerLeft,child: Text(selectHeight)),),
         Padding(
           padding: const EdgeInsets.all(8.0),

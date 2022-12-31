@@ -25,7 +25,7 @@ class _LandingScreenState extends State<LandingScreen> {
               child: Text(helloTxt,
                   style: TextStyle(
                       color: AppColors.bgWhite,
-                      fontSize: 35,
+                      fontSize: 30,
                       fontWeight: FontWeight.w900),
                   textAlign: TextAlign.center),
             ),

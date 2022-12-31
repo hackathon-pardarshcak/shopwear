@@ -45,7 +45,7 @@ class _WeightMeasurementViewState extends State<WeightMeasurementView> {
   Widget weightWidget() {
     return Column(
       children: [
-        Padding(padding: EdgeInsets.only(top: 40),child: Center(
+        Padding(padding: EdgeInsets.only(top: 60),child: Center(
             child: Image.asset(weightImage,height: 200,
               width: 200,)),),
         Padding(padding: EdgeInsets.only(top: 100,left: 53),child: Align(alignment:Alignment.centerLeft,child: Text(selectWeight)),),
