@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Network/NetworkHandler/network_binding.dart';
 import 'UI/View/SplashScreen/splashscreen.dart';
+import 'UI/View/GridViewScreen/View/topWereGridView.dart';
 
 void main() {
   runApp( const MyApp());
