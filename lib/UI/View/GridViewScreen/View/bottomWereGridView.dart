@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../Utils/app_colors.dart';
 import '../../../../Utils/common_function.dart';
 import '../../../../Utils/drawer.dart';
@@ -8,7 +9,9 @@ import '../../../CustomWidgets/common_button.dart';
 import '../../../CustomWidgets/custom_appbar.dart';
 import '../../../CustomWidgets/custom_circularprogressindicator.dart';
 import '../../../CustomWidgets/custom_gridview.dart';
+import '../../AllProductsModule/View/allProducts_screen.dart';
 import '../../BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
+import '../../TopWearModule/View/topProducts_screen.dart';
 
 class BottomWereGridview extends StatefulWidget {
   const BottomWereGridview({Key? key}) : super(key: key);
@@ -37,7 +40,24 @@ class _BottomWereGridviewState extends State<BottomWereGridview> {
                 padding: const EdgeInsets.only(
                     left: 44.0, right: 44.0, bottom: 22.0),
                 child:
-                    commonButton(context, takeTrialBtnTxt.toUpperCase(), () {}),
+                    commonButton(context, takeTrialBtnTxt.toUpperCase(), () async {
+                      final prefs = await SharedPreferences.getInstance();
+                      prefs.setInt(keyBottomIndex, bottomSelectedCard.value);
+                      print('hellloooo->${prefs.getInt(keyTopIndex)}');
+                      print('helllooookeyBottomIndex->${prefs.getInt(keyBottomIndex)}');
+                      if(prefs.getInt(keyTopIndex) != null){
+                        if(prefs.getInt(keyTopIndex)! >= 0){
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => AllProductsListing()));
+                        }else{
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => TopProductsListing()));
+                        }
+                      }else {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => TopProductsListing()));
+                      }
+                    }),
               ),
             )),
         body: Obx(() => bottomWereGrid.isLoading == true

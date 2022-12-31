@@ -25,3 +25,7 @@ const String selectWeight = 'Select Weight';
 
 const drawerImg = 'assets/Images/PNG/drawerImage.png';
 const drawerIconImg = 'assets/Images/PNG/drawerIcon.png';
+
+///shared preference
+const String keyTopIndex = 'selected_top_index';
+const String keyBottomIndex = 'selected_bottom_index';
