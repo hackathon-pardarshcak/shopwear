@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Network/NetworkHandler/network_binding.dart';
-import 'UI/View/AllProductsModule/View/allproducts_screen.dart';
-import 'UI/View/DetailScreenModule/View/measurement_screen.dart';
-
-import 'UI/View/MeasurmentModule/landing_screen.dart';
+import 'UI/View/SplashScreen/splashscreen.dart';
 
 void main() {
   runApp( const MyApp());
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
       initialBinding: NetworkBinding(),
       theme: ThemeData.light(),
       // fallbackLocale: const Locale('en', 'US'),
-      home: const LandingScreen(),
+      home: const SplashScreen()
     );
   }
 }

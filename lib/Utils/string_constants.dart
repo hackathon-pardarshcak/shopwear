@@ -8,7 +8,7 @@ const String title = 'Basic Structure';
 const String advanceTitle = 'Advance Structure';
 const String tapTOMeasureTxt = 'TAP TO MEASURE';
 const String measurementTxt = "Let's change ecommerce experience";
-const String helloTxt = 'Hello\n\nIPSIANS';
+const String helloTxt = 'Welcome';
 
 ///Image Path
 const String noInternetImage = 'assets/Images/GIF/no-internet-connection.gif';
@@ -22,5 +22,5 @@ const String enterMeasurement = 'Enter Measurement';
 const String selectHeight = 'SELECT HEIGHT';
 const String selectWeight = 'SELECT WEIGHT';
 
-const drawerImg = 'assets/Images/PNG/drawerImage.png';
+const drawerImg = 'assets/Images/PNG/iconimagewhite.png';
 const drawerIconImg = 'assets/Images/PNG/drawerIcon.png';

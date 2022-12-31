@@ -190,9 +190,9 @@ Widget allProductsGridView(BuildContext context, double itemWidth, double itemHe
                     ),
                   ),
                 ),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 5.0),
                 Padding(
-                  padding:  EdgeInsets.only(
+                  padding:  const EdgeInsets.only(
                       left: 10.0, bottom: 5.0, right: 10.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

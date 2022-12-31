@@ -85,8 +85,10 @@ flutter:
     - assets/Images/PNG/
     - assets/Images/PNG/drawerIcon.png
     - assets/Images/PNG/drawerImage.png
+    - assets/Images/PNG/iconimagewhite.png
     - assets/Images/PNG/height.png
     - assets/Images/PNG/weight.png
+    - assets/Images/JPG/height.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

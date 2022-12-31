@@ -10,3 +10,9 @@ var measurementBtnStyle = ElevatedButton.styleFrom(
 );
 
 
+var measurementWhiteBtnStyle = ElevatedButton.styleFrom(
+  backgroundColor: AppColors.bgWhite,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(50), // <-- Radius
+  ),
+);
