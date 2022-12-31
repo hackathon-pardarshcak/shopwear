@@ -18,6 +18,9 @@ const String noDataFound = 'assets/Images/JPG/noDataFound.jpg';
 const String heightImage = 'assets/Images/PNG/height.png';
 const String weightImage = 'assets/Images/PNG/weight.png';
 
+///Model Path
+// const String humanModel = 'models.scnassets/jadiyoxxl.dae';
+const String humanModel = 'models.scnassets/jadiyowithshirtandchado.dae';
 ///Measurement Screen
 const String enterMeasurement = 'Enter Measurement';
 const String selectHeight = 'Select Height';

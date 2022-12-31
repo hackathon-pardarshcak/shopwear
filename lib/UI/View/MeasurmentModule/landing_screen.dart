@@ -14,60 +14,55 @@ class LandingScreen extends StatefulWidget {
 class _LandingScreenState extends State<LandingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 52.0,
-                left: 109.0,
-                right: 109.0,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.black,
+        body: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 50.0, left: 109.0, right: 109.0),
+                child: Text(helloTxt,
+                    style: TextStyle(
+                        color: AppColors.bgWhite,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w900),
+                    textAlign: TextAlign.center),
               ),
-              child: Text(helloTxt,
-                  style: TextStyle(
-                      color: AppColors.bgWhite,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w900),
-                  textAlign: TextAlign.center),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 37.0, right: 37.0),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: Text(measurementTxt,
-                        style: TextStyle(
-                            color: AppColors.bgWhite,
-                            fontSize: 24,
-                            fontWeight: FontWeight.w800),
-                        textAlign: TextAlign.center),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 10, top: 10),
-                    child: Image.asset(
-                      drawerImg,
-                      height: 300,
-                      width: 300,
+              Padding(
+                padding: const EdgeInsets.only(left: 37.0, right: 37.0),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Text(measurementTxt,
+                          style: TextStyle(
+                              color: AppColors.bgWhite,
+                              fontSize: 24,
+                              fontWeight: FontWeight.w800),
+                          textAlign: TextAlign.center),
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10,top: 20),
+                      child: Image.asset(
+                        drawerImg,
+                        height: 300,
+                        width: 300,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 50, right: 50, left: 50),
-        child: commonWhiteButton(context, tapTOMeasureTxt, () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => MeasurementScreen()),
-          );
-        }),
+          bottomNavigationBar: Padding(
+          padding: const EdgeInsets.only(bottom: 50,right: 50,left: 50),
+            child: commonWhiteButton(context, tapTOMeasureTxt, () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MeasurementScreen()),
+          );}),
+        ),
       ),
     );
   }
