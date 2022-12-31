@@ -41,7 +41,9 @@ PreferredSizeWidget commonAppBarTxt(BuildContext context,titleTxt,searchVisibili
       Visibility(
           visible: searchVisibility,
           child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+
+              },
               icon: Icon(Icons.search),
               color: AppColors.bgBlack)),
     ],

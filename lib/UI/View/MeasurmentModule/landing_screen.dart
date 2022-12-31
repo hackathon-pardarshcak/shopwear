@@ -21,7 +21,11 @@ class _LandingScreenState extends State<LandingScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 150.0, left: 109.0, right: 109.0),
+              padding: const EdgeInsets.only(
+                top: 52.0,
+                left: 109.0,
+                right: 109.0,
+              ),
               child: Text(helloTxt,
                   style: TextStyle(
                       color: AppColors.bgWhite,
@@ -43,7 +47,7 @@ class _LandingScreenState extends State<LandingScreen> {
                         textAlign: TextAlign.center),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 10,top: 20),
+                    padding: const EdgeInsets.only(bottom: 10, top: 10),
                     child: Image.asset(
                       drawerImg,
                       height: 300,
@@ -56,11 +60,14 @@ class _LandingScreenState extends State<LandingScreen> {
           ],
         ),
       ),
-        bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 100,right: 50,left: 50),
-          child: commonWhiteButton(context, tapTOMeasureTxt, () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => MeasurementScreen()),
-        );}),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(bottom: 50, right: 50, left: 50),
+        child: commonWhiteButton(context, tapTOMeasureTxt, () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => MeasurementScreen()),
+          );
+        }),
       ),
     );
   }
