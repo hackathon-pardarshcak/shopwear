@@ -9,6 +9,7 @@ import '../../../CustomWidgets/custom_appbar.dart';
 import '../../../CustomWidgets/custom_circularprogressindicator.dart';
 import '../../../CustomWidgets/custom_gridview.dart';
 import '../../AllProductsModule/View_Model/allProducts_view_model.dart';
+import '../../ArScreen/View/ar_screen.dart';
 
 class AllProductsGridview extends StatefulWidget {
   const AllProductsGridview({Key? key}) : super(key: key);
@@ -36,7 +37,9 @@ class _AllProductsGridviewState extends State<AllProductsGridview> {
           visible: isAllButtonVisible.value,
           child: Padding(
             padding: const EdgeInsets.only(left: 44.0,right: 44.0,bottom: 22.0),
-            child: commonButton(context, takeTrialBtnTxt.toUpperCase(), () { }),
+            child: commonButton(context, takeTrialBtnTxt.toUpperCase(), () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ARScreenKit()));
+            }),
           ),
         )),
           body: Obx(()=>

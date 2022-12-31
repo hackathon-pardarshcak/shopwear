@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'Network/NetworkHandler/network_binding.dart';
+import 'UI/View/SplashScreen/splashscreen.dart';
 import 'UI/View/GridViewScreen/View/topWereGridView.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialBinding: NetworkBinding(),
       theme: ThemeData.light(),
       // fallbackLocale: const Locale('en', 'US'),
-      home: const TopWereGridview(),
+      home: const SplashScreen()
     );
   }
 }

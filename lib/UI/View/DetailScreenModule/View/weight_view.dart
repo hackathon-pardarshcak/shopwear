@@ -6,6 +6,7 @@ import 'package:weight_slider/weight_slider.dart';
 import '../../../../Utils/string_constants.dart';
 import '../../../CustomWidgets/common_button.dart';
 import '../../../CustomWidgets/custom_appbar.dart';
+import '../../AllProductsModule/View/allProducts_screen.dart';
 
 class WeightMeasurementView extends StatefulWidget {
   const WeightMeasurementView({Key? key}) : super(key: key);
@@ -27,12 +28,16 @@ class _WeightMeasurementViewState extends State<WeightMeasurementView> {
                 child: Column(
                   children: [
                     weightWidget(),
-                    commonButton(context, 'NEXT', () {}
-                    )
                   ],
                 ),
               ),
-          )
+          ),
+        bottomNavigationBar: Padding(
+         padding: const EdgeInsets.only(bottom: 50,left: 50,right: 50),
+         child: commonButton(context, 'NEXT', () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => AllProductsListing()));
+          }),
+       )
       ),
     );
   }
@@ -40,8 +45,10 @@ class _WeightMeasurementViewState extends State<WeightMeasurementView> {
   Widget weightWidget() {
     return Column(
       children: [
-        Padding(padding: EdgeInsets.only(top: 29),child: Center(child: Image.asset(weightImage)),),
-        Padding(padding: EdgeInsets.only(top: 25,left: 53),child: Align(alignment:Alignment.centerLeft,child: Text(selectWeight.toLowerCase())),),
+        Padding(padding: EdgeInsets.only(top: 60),child: Center(
+            child: Image.asset(weightImage,height: 200,
+              width: 200,)),),
+        Padding(padding: EdgeInsets.only(top: 100,left: 53),child: Align(alignment:Alignment.centerLeft,child: Text(selectWeight)),),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: WeightSlider(
