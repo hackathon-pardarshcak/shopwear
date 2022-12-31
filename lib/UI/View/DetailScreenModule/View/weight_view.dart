@@ -7,6 +7,7 @@ import '../../../../Utils/string_constants.dart';
 import '../../../CustomWidgets/common_button.dart';
 import '../../../CustomWidgets/custom_appbar.dart';
 import '../../AllProductsModule/View/allProducts_screen.dart';
+import '../../TopWearModule/View/topProducts_screen.dart';
 
 class WeightMeasurementView extends StatefulWidget {
   const WeightMeasurementView({Key? key}) : super(key: key);
@@ -35,7 +36,7 @@ class _WeightMeasurementViewState extends State<WeightMeasurementView> {
         bottomNavigationBar: Padding(
          padding: const EdgeInsets.only(bottom: 50,left: 50,right: 50),
          child: commonButton(context, 'NEXT', () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => AllProductsListing()));
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => TopProductsListing()));
           }),
        )
       ),

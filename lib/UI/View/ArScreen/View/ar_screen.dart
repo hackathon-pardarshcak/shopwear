@@ -36,7 +36,7 @@ class _ARScreenKitState extends State<ARScreenKit> {
             backgroundColor: Color(0xFF3D3D3D),
             centerTitle: true,
             elevation: 0,
-            title: Text('data'),
+            title: Text('CLOTHS'),
 
           ),
           body: ARKitSceneView(
@@ -58,14 +58,14 @@ class _ARScreenKitState extends State<ARScreenKit> {
       scale: vector.Vector3(0.08380995690822601,
           0.07900360971689224,
           0.08580047637224197),
-      position: vector.Vector3(0.0, 0.0, 0.0),
+      position: vector.Vector3(0.0, -0.9, -0.9),
       eulerAngles: vector.Vector3.zero(),
     );
     this.arkitController?.add(node!);
-    // timer = Timer.periodic(const Duration(milliseconds: 50), (timer) {
-    //   final rotation = node?.eulerAngles;
-    //   rotation?.x += 0.01;
-    //   node?.eulerAngles = rotation!;
-    // });
+    timer = Timer.periodic(const Duration(milliseconds: 50), (timer) {
+      final rotation = node?.eulerAngles;
+      rotation?.x += 0.01;
+      node?.eulerAngles = rotation!;
+    });
   }
 }

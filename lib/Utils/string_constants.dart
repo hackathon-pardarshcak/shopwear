@@ -21,6 +21,8 @@ const String weightImage = 'assets/Images/PNG/weight.png';
 ///Model Path
 // const String humanModel = 'models.scnassets/jadiyoxxl.dae';
 const String humanModel = 'models.scnassets/jadiyowithshirtandchado.dae';
+const String topModel = 'models.scnassets/jadiyowithtshirt.dae';
+const String bottomModel = 'models.scnassets/jadiyowithchado.dae';
 ///Measurement Screen
 const String enterMeasurement = 'Enter Measurement';
 const String selectHeight = 'Select Height';

@@ -6,6 +6,9 @@ import 'package:shopwear/UI/View/DetailScreenModule/View/weight_screen.dart';
 import 'package:shopwear/Utils/string_constants.dart';
 import 'package:weight_slider/weight_slider.dart';
 
+import '../../../../Config/Services/network_manager.dart';
+import '../../../../Utils/error_screen.dart';
+
 
 class MeasurementScreen extends StatefulWidget {
   const MeasurementScreen({Key? key}) : super(key: key);
@@ -15,12 +18,17 @@ class MeasurementScreen extends StatefulWidget {
 }
 
 
-class _MeasurementScreenState extends State<MeasurementScreen> {
+class _MeasurementScreenState extends State<MeasurementScreen> with WidgetsBindingObserver{
   RxInt height = 150.obs;
+
+  final GetXNetworkManager networkManager = Get.find<GetXNetworkManager>();
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return GetBuilder<GetXNetworkManager>(
+        builder: (builder) => networkManager.connectionType == 0
+        ? const SomethingWentWrong()
+        :SafeArea(
         child: Scaffold(
           appBar: commonAppBarTxt(context,enterMeasurement, false),
           body: Obx(()=>
@@ -39,6 +47,7 @@ class _MeasurementScreenState extends State<MeasurementScreen> {
       }),
        )
         ),
+        )
     );
   }
 

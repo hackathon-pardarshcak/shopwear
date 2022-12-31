@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import '../../../Config/Services/network_manager.dart';
 import '../../../Utils/app_colors.dart';
+import '../../../Utils/error_screen.dart';
 import '../../../Utils/string_constants.dart';
 import '../../CustomWidgets/common_button.dart';
 import '../DetailScreenModule/View/measurement_view.dart';
@@ -11,10 +15,16 @@ class LandingScreen extends StatefulWidget {
   State<LandingScreen> createState() => _LandingScreenState();
 }
 
-class _LandingScreenState extends State<LandingScreen> {
+class _LandingScreenState extends State<LandingScreen> with WidgetsBindingObserver{
+
+
+  final GetXNetworkManager networkManager = Get.find<GetXNetworkManager>();
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return GetBuilder<GetXNetworkManager>(
+        builder: (builder) => networkManager.connectionType == 0
+        ? const SomethingWentWrong()
+        :SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
         body: Center(
@@ -22,7 +32,7 @@ class _LandingScreenState extends State<LandingScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 50.0, left: 109.0, right: 109.0),
+                padding: const EdgeInsets.only(top: 70.0, left: 109.0, right: 109.0),
                 child: Text(helloTxt,
                     style: TextStyle(
                         color: AppColors.bgWhite,
@@ -64,6 +74,7 @@ class _LandingScreenState extends State<LandingScreen> {
           );}),
         ),
       ),
+        ),
     );
   }
 }

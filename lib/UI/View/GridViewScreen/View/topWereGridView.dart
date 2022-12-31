@@ -12,6 +12,8 @@ import '../../../CustomWidgets/custom_appbar.dart';
 import '../../../CustomWidgets/custom_circularprogressindicator.dart';
 import '../../../CustomWidgets/custom_gridview.dart';
 import '../../AllProductsModule/View/allProducts_screen.dart';
+import '../../ArScreen/View/ar_screen.dart';
+import '../../ArScreen/View/topWereAr.dart';
 import '../../BottomWearModule/View/bottomProducts_screen.dart';
 import '../../TopWearModule/View/topProducts_screen.dart';
 
@@ -43,15 +45,15 @@ class _TopWereGridviewState extends State<TopWereGridview> {
                 padding: const EdgeInsets.only(
                     left: 44.0, right: 44.0, bottom: 22.0),
                 child: commonButton(context, takeTrialBtnTxt.toUpperCase(),
-                    () async {
-                  final prefs = await SharedPreferences.getInstance();
+                    ()  {
+                  /*final prefs = await SharedPreferences.getInstance();
                   prefs.setInt(keyTopIndex, topSelectedCard.value);
                   print('hellloooo->${prefs.getInt(keyTopIndex)}');
                   print('helllooookeyBottomIndex->${prefs.getInt(keyBottomIndex)}');
                   if(prefs.getInt(keyBottomIndex) != null){
                     if(prefs.getInt(keyBottomIndex)! >= 0){
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => AllProductsListing()));
+                          builder: (context) => ARScreenKit()));
                     }else{
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => BottomProductsListing()));
@@ -59,7 +61,9 @@ class _TopWereGridviewState extends State<TopWereGridview> {
                   }else {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => BottomProductsListing()));
-                  }
+                  }*/
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => TopARScreenKit()));
                 }),
               ),
             )),
@@ -153,7 +157,7 @@ class _TopWereGridviewState extends State<TopWereGridview> {
                                     ),
                                   ),
                                   Text(
-                                    topProductsViewModel
+                                    "\$" +topProductsViewModel
                                         .topProductList[index].price
                                         .toString(),
                                     maxLines: 1,

@@ -10,6 +10,7 @@ import '../../../CustomWidgets/custom_appbar.dart';
 import '../../../CustomWidgets/custom_circularprogressindicator.dart';
 import '../../../CustomWidgets/custom_gridview.dart';
 import '../../AllProductsModule/View/allProducts_screen.dart';
+import '../../ArScreen/View/bottomWearAr.dart';
 import '../../BottomWearModule/View_Model/bottomwearproducts_view_model.dart';
 import '../../TopWearModule/View/topProducts_screen.dart';
 
@@ -40,8 +41,8 @@ class _BottomWereGridviewState extends State<BottomWereGridview> {
                 padding: const EdgeInsets.only(
                     left: 44.0, right: 44.0, bottom: 22.0),
                 child:
-                    commonButton(context, takeTrialBtnTxt.toUpperCase(), () async {
-                      final prefs = await SharedPreferences.getInstance();
+                    commonButton(context, takeTrialBtnTxt.toUpperCase(), ()  {
+                      /*final prefs = await SharedPreferences.getInstance();
                       prefs.setInt(keyBottomIndex, bottomSelectedCard.value);
                       print('hellloooo->${prefs.getInt(keyTopIndex)}');
                       print('helllooookeyBottomIndex->${prefs.getInt(keyBottomIndex)}');
@@ -56,7 +57,9 @@ class _BottomWereGridviewState extends State<BottomWereGridview> {
                       }else {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => TopProductsListing()));
-                      }
+                      }*/
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => BottomARScreenKit()));
                     }),
               ),
             )),
@@ -151,7 +154,7 @@ class _BottomWereGridviewState extends State<BottomWereGridview> {
                                     ),
                                   ),
                                   Text(
-                                    bottomViewModel.bottomWearList[index].price
+                                    "\$" +bottomViewModel.bottomWearList[index].price
                                         .toString(),
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
