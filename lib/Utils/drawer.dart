@@ -30,12 +30,12 @@ Widget customDrawer(BuildContext context) {
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  BottomWereGridview()));
               },
             ),
-            ListTile(
-              title: const Text('All products'),
-              onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  AllProductsGridview()));
-              },
-            ),
+            // ListTile(
+            //   title: const Text('All products'),
+            //   onTap: () {
+            //     Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  AllProductsGridview()));
+            //   },
+            // ),
           ],
         ),
       );
