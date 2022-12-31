@@ -1,4 +1,6 @@
 PODS:
+  - arkit_plugin (0.0.1):
+    - Flutter
   - connectivity_plus (0.0.1):
     - Flutter
     - ReachabilitySwift
@@ -6,6 +8,7 @@ PODS:
   - ReachabilitySwift (5.0.0)
 
 DEPENDENCIES:
+  - arkit_plugin (from `.symlinks/plugins/arkit_plugin/ios`)
   - connectivity_plus (from `.symlinks/plugins/connectivity_plus/ios`)
   - Flutter (from `Flutter`)
 
@@ -14,12 +17,15 @@ SPEC REPOS:
     - ReachabilitySwift
 
 EXTERNAL SOURCES:
+  arkit_plugin:
+    :path: ".symlinks/plugins/arkit_plugin/ios"
   connectivity_plus:
     :path: ".symlinks/plugins/connectivity_plus/ios"
   Flutter:
     :path: Flutter
 
 SPEC CHECKSUMS:
+  arkit_plugin: 3e42571e8be84adabb8a178bd51c22fa981e16bd
   connectivity_plus: 413a8857dd5d9f1c399a39130850d02fe0feaf7e
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
